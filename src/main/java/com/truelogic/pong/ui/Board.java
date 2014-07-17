@@ -23,7 +23,7 @@ public class Board extends JPanel implements ActionListener {
 
 	private static final int DELAY = 60;
 
-	public static final int M_WIDTH = 100;
+	public static final int M_WIDTH = 80;
 
 	public static final int M_HEIGHT = 60;
 
@@ -140,7 +140,12 @@ public class Board extends JPanel implements ActionListener {
 		public KeyPressListener(Board board) {
 			this.board = board;
 		}
-
+		
+		@Override
+		public void keyReleased(KeyEvent e) {
+			super.keyReleased(e);
+			board.getBar().setDirection(0);
+		}
 
 		@Override
 		public void keyPressed(KeyEvent e) {

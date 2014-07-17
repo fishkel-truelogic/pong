@@ -97,11 +97,7 @@ public class Bar {
 	}
 
 	public void setDirection(int direction) {
-		if (this.direction != 0 && direction != this.direction) {
-			this.direction = 0;
-		} else {
 			this.direction = direction;
-		}
 	}
 
 	public Integer getVelocity() {
