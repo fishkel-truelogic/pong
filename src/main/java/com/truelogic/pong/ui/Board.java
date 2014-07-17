@@ -21,7 +21,7 @@ public class Board extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 592910003380869323L;
 
-	private static final int DELAY = 80;
+	private static final int DELAY = 60;
 
 	public static final int M_WIDTH = 100;
 
@@ -98,7 +98,9 @@ public class Board extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		
 		bar.move();
-		enemyBar.move(ball);
+		if (ball.getX() >= M_WIDTH / 2) {
+			enemyBar.move(ball);
+		}
 		if (ball.move(crash(ball, bar, enemyBar))) {
 			this.ball = new Ball(M_WIDTH / 2, M_HEIGHT / 2);
 		}

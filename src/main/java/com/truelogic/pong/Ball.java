@@ -44,6 +44,16 @@ public class Ball extends Pixel {
 		return y - 1 <= 0 || y + 1 >= Board.M_HEIGHT;
 	}
 
+	public int getVx() {
+		return vx;
+	}
+
+	public void setVx(int vx) {
+		this.vx = vx;
+	}
+	
+	
+
 	
 	
 }
